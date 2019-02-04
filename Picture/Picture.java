@@ -16,6 +16,10 @@ public class Picture
     private Square window;
     private Triangle roof;
     private Circle sun;
+    private Triangle treeTop;
+    private Square treeBottom;
+    private Circle knob;
+    private Square door;
 
     /**
      * Constructor for objects of class Picture
@@ -37,9 +41,28 @@ public class Picture
 
         window = new Square();
         window.changeColor("black");
-        window.moveHorizontal(20);
+        window.moveHorizontal(1);
         window.moveVertical(100);
         window.makeVisible();
+        
+        window = new Square();
+        window.changeColor("black");
+        window.moveHorizontal(70);
+        window.moveVertical(100);
+        window.makeVisible();
+        
+        door = new Square();
+        door.changeColor("magenta");
+        door.moveHorizontal(35);
+        door.moveVertical(150);
+        door.makeVisible();
+        
+        knob = new Circle();
+        knob.changeColor("black");
+        knob.moveHorizontal(90);
+        knob.moveVertical(150);
+        knob.changeSize(10);
+        knob.makeVisible();
 
         roof = new Triangle();
         roof.changeSize(50, 140);
@@ -53,6 +76,22 @@ public class Picture
         sun.moveVertical(-10);
         sun.changeSize(60);
         sun.makeVisible();
+        
+        treeTop = new Triangle();
+        treeTop.changeColor("green");
+        treeTop.changeSize(90, 50);
+        treeTop.moveHorizontal(150);
+        treeTop.moveVertical(90);
+        treeTop.makeVisible();
+        
+        treeBottom = new Square();
+        treeBottom.changeColor("magenta");
+        treeBottom.changeSize(25);
+        treeBottom.moveHorizontal(130);
+        treeBottom.moveVertical(145);
+        treeBottom.makeVisible();
+        
+        
     }
 
     /**
